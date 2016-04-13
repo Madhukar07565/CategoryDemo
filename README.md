@@ -16,9 +16,9 @@ We need to pass the file name as argument.
 
 1. Read each line from the file
 2. And get the category and subcategory
-3. Once you get category, sub category add these to Category objcet
-4. check for the duplicates if not present add the category objcet category list
-5. print the categoryCountMap and categories to console
+3. Once you get category, sub category add these to Category object
+4. Check for the duplicates if not present then add the category objcet to category list
+5. By using Category list print the categoryCountMap and categories to console
 
 ### How to run:
 
