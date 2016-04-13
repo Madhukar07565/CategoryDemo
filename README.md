@@ -66,4 +66,7 @@ Run the below command to get the code coverage report
    
    ![alt text](codecoverage.png "Code Coverage")
 
+###PMD: 
+ Verified the code with PMD check and not found any critical voilations(except the one which are related to System.out.println(), which is required in this program)
+
 
