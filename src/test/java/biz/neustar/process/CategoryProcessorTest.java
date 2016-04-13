@@ -19,16 +19,16 @@ import org.junit.Test;
 public class CategoryProcessorTest {
 
     CategoryProcessor categoryProcessor = new CategoryProcessor();
-    List<String> legalCategories = Arrays.asList("PERSON", "PLACE", "ANIMAL", "COMPUTER", "OTHER");
-    File resourcesDirectory = new File("src/test/resources");
+    private final static List<String> LEGAL_CATEGORIES = Arrays.asList("PERSON", "PLACE", "ANIMAL", "COMPUTER", "OTHER");
+    private final static File RESOURCES_DIRECTORY = new File("src/test/resources");
 
     @Test
     public void testProcessValidFile() {
 
-        List<Category> categories = categoryProcessor.processFile(resourcesDirectory + "/ValidCategoryset.txt",
-                legalCategories);
+        List<Category> categories = categoryProcessor.processFile(RESOURCES_DIRECTORY + "/ValidCategoryset.txt",
+                LEGAL_CATEGORIES);
 
-        Map<String, Integer> actualMap = categoryProcessor.extractCategoryCount(legalCategories, categories);
+        Map<String, Integer> actualMap = categoryProcessor.extractCategoryCount(LEGAL_CATEGORIES, categories);
         Map<String, Integer> expectedMap = new LinkedHashMap<String, Integer>();
         expectedMap.put("PERSON", 2);
         expectedMap.put("PLACE", 2);
@@ -54,11 +54,11 @@ public class CategoryProcessorTest {
     @Test
     public void testProcessInvalidCategorySet() {
 
-        List<Category> categories = categoryProcessor.processFile(resourcesDirectory + "/InvalidCategoryset.txt",
-                legalCategories);
-        categoryProcessor.printOutput(new File(resourcesDirectory+"//InvalidCategoryset.txt"));
+        List<Category> categories = categoryProcessor.processFile(RESOURCES_DIRECTORY + "/InvalidCategoryset.txt",
+                LEGAL_CATEGORIES);
+        categoryProcessor.printOutput(new File(RESOURCES_DIRECTORY+"//InvalidCategoryset.txt"));
 
-        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(legalCategories, categories);
+        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(LEGAL_CATEGORIES, categories);
         Map<String, Integer> expected = new LinkedHashMap<String, Integer>();
         expected.put("PERSON", 1);
         expected.put("PLACE", 2);
@@ -83,9 +83,9 @@ public class CategoryProcessorTest {
     @Test
     public void testProcessFileWithEmptyLines() {
 
-        List<Category> categories = categoryProcessor.processFile(resourcesDirectory
-                + "/ValidCategorysetWithEmptyLine.txt", legalCategories);
-        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(legalCategories, categories);
+        List<Category> categories = categoryProcessor.processFile(RESOURCES_DIRECTORY
+                + "/ValidCategorysetWithEmptyLine.txt", LEGAL_CATEGORIES);
+        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(LEGAL_CATEGORIES, categories);
         Map<String, Integer> expected = new LinkedHashMap<String, Integer>();
         expected.put("PERSON", 2);
         expected.put("PLACE", 1);
@@ -110,9 +110,9 @@ public class CategoryProcessorTest {
     @Test
     public void testProcessFileWithoutOneLegalCategory() {
 
-        List<Category> categories = categoryProcessor.processFile(resourcesDirectory
-                + "/ValidCategorysetWithoutOneLegalCategory.txt", legalCategories);
-        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(legalCategories, categories);
+        List<Category> categories = categoryProcessor.processFile(RESOURCES_DIRECTORY
+                + "/ValidCategorysetWithoutOneLegalCategory.txt", LEGAL_CATEGORIES);
+        Map<String, Integer> actual = categoryProcessor.extractCategoryCount(LEGAL_CATEGORIES, categories);
         Map<String, Integer> expected = new LinkedHashMap<String, Integer>();
         expected.put("PERSON", 2);
         expected.put("PLACE", 1);
@@ -136,10 +136,10 @@ public class CategoryProcessorTest {
     @Test
     public void testProcessValidCategoryWithReverseOrder() {
 
-        List<Category> categories = categoryProcessor.processFile(resourcesDirectory
-                + "/ValidCategorysetWithReverseOrder.txt", legalCategories);
+        List<Category> categories = categoryProcessor.processFile(RESOURCES_DIRECTORY
+                + "/ValidCategorysetWithReverseOrder.txt", LEGAL_CATEGORIES);
 
-        Map<String, Integer> actualMap = categoryProcessor.extractCategoryCount(legalCategories, categories);
+        Map<String, Integer> actualMap = categoryProcessor.extractCategoryCount(LEGAL_CATEGORIES, categories);
         Map<String, Integer> expectedMap = new LinkedHashMap<String, Integer>();
         expectedMap.put("PERSON", 2);
         expectedMap.put("PLACE", 2);

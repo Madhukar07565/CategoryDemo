@@ -4,9 +4,10 @@ Category and SubCategory System
 
 We need to pass the file name as argument.
 
-### System Requirements:
+### Prerequisites:
 
-1. Java version should be greater than 1.7
+1. Java version greater than or equal 1.7
+2. Gradle
 
 ### External libraries used : 
 1. commons-collections
