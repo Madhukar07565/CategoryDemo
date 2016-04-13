@@ -15,15 +15,18 @@ We need to pass the file name as argument.
 ### Algorithm:
 
 1. Read each line from the file
-2. Convert each line of file to Category Object, which contains line, category and sub category
-3. print the categoryCountMap and categories to console
+2. And get the category and subcategory
+3. Once you get category, sub category add these to Category object
+4. Check for the duplicates if not present then add the category objcet to category list
+5. By using Category list print the categoryCountMap and categories to console
 
 ### How to run:
 
 1. Run from the IDE
 2. gradle clean test buildJar  - it will generate the jar file
     
-     **java -jar CategoryDemo-1.0.jar 'inputfile'**
+     **java -jar CategoryDemo-1.0.jar 'inputfile'**  <br />
+    e.g : java -jar CategoryDemo-1.0.jar C:\ValidCategeroyset.txt
    
 ####File Input:
 - PERSON Bob Jones
@@ -38,21 +41,21 @@ We need to pass the file name as argument.
 - ANIMAL Cat
 
 ####Output:
-- Category	Count
-- PERSON	2
-- PLACE	2
-- ANIMAL	2
-- COMPUTER	1
-- OTHER	1 
+Category	Count <br />
+PERSON	    2 <br />
+PLACE	    2 <br />
+ANIMAL	    2 <br />
+COMPUTER	1 <br />
+OTHER	    1  <br />
 
-- PERSON Bob Jones
-- PLACE Washington
-- PERSON Mary
-- COMPUTER Mac
-- OTHER Tree
-- ANIMAL Dog
-- PLACE Texas
-- ANIMAL Cat
+PERSON Bob Jones <br />
+PLACE Washington <br />
+PERSON Mary <br />
+COMPUTER Mac <br />
+OTHER Tree <br />
+ANIMAL Dog <br />
+PLACE Texas <br />
+ANIMAL Cat <br />
 
 
 ###Code Coverage:
@@ -60,9 +63,10 @@ We need to pass the file name as argument.
 Run the below command to get the code coverage report
 
    **gradle clean test jacocoTestReport**
+   
+   ![alt text](codecoverage.png "Code Coverage")
 
-###PMD:
+###PMD: 
+ Verified the code with PMD check and not found any critical voilations(except the one which are related to System.out.println(), which is required in this program)
 
-
-###FindBugs:
 
