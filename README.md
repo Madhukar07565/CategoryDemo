@@ -60,6 +60,8 @@ We need to pass the file name as argument.
 Run the below command to get the code coverage report
 
    **gradle clean test jacocoTestReport**
+   
+   ![alt text](codecoverage.png "Code Coverage")
 
 ###PMD:
 
