@@ -17,12 +17,16 @@ We need to pass the file name as argument.
 1. Read each line from the file
 2. And get the category and subcategory
 3. Once you get category, sub category add these to Category object
-4. Check for the duplicates if not present then add the category objcet to category list
+4. Check for the duplicates if not present then add the category object to category list
 5. By using Category list print the categoryCountMap and categories to console
 
 ### How to run:
 
-1. Run from the IDE
+1. Run from the IDE 
+     Run as java application CategoryDemo by passing the filename as argument
+   
+**OR**
+
 2. gradle clean test buildJar  - it will generate the jar file
     
      **java -jar CategoryDemo-1.0.jar 'inputfile'**  <br />
@@ -67,6 +71,6 @@ Run the below command to get the code coverage report
    ![alt text](codecoverage.png "Code Coverage")
 
 ###PMD: 
- Verified the code with PMD check and not found any critical voilations(except the one which are related to System.out.println(), which is required in this program)
+ Verified the code with PMD check and not found any critical violations(except the one which are related to System.out.println(), which is required in this program)
 
 
