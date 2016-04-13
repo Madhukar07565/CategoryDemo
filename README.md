@@ -23,7 +23,7 @@ We need to pass the file name as argument.
 1. Run from the IDE
 2. gradle clean test buildJar  - it will generate the jar file
     
-     **java -jar CategoryDemo-1.0.jar <file>**
+     **java -jar CategoryDemo-1.0.jar 'inputfile' **
    
 ####File Input:
 - PERSON Bob Jones
