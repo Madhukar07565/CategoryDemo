@@ -149,7 +149,6 @@ public class CategoryProcessorTest {
         Assert.assertEquals(expectedMap, actualMap);
 
         List<String> actualList = categoryProcessor.extractCategories(categories);
-        System.out.println(actualList);
         List<String> expectedList = new LinkedList<String>();
         expectedList.add("ANIMAL Cat");
         expectedList.add("PLACE Texas");
