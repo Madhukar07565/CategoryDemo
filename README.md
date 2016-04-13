@@ -22,7 +22,8 @@ We need to pass the file name as argument.
 
 1. Run from the IDE
 2. gradle clean test buildJar  - it will generate the jar file
-   java -jar CategoryDemo-1.0.jar <file>
+    
+     **java -jar CategoryDemo-1.0.jar <file>**
    
 ####File Input:
 - PERSON Bob Jones
@@ -58,7 +59,7 @@ We need to pass the file name as argument.
 
 Run the below command to get the code coverage report
 
-gradle clean test jacocoTestReport
+   **gradle clean test jacocoTestReport**
 
 ###PMD:
 
