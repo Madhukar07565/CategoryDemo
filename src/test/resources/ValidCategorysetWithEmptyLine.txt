@@ -1,0 +1,8 @@
+PERSON Bob Jones
+PLACE Washington
+PERSON Mary
+
+PERSON Bob Jones
+OTHER Tree
+ANIMAL Cat
+COMPUTER Mac

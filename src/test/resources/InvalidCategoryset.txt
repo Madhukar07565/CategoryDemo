@@ -1,0 +1,8 @@
+PERSONBob
+PLACE Washington
+PERSON Mary
+COMPUTER Mac
+OTHER Tree
+ANIMAL Dog
+PLACE Texas
+ANIMAL Cat

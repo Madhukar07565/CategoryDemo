@@ -1,0 +1,10 @@
+ANIMAL Cat
+FOOD Steak
+PLACE Texas
+ANIMAL Dog
+OTHER Tree
+PERSON Bob Jones
+COMPUTER Mac
+PERSON Mary
+PLACE Washington
+PERSON Bob Jones
