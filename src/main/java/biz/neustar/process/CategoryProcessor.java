@@ -144,7 +144,8 @@ public class CategoryProcessor {
             int count = 0;
             for (Category updatedCategory : categoryList) {
                 if (legalCategory.equalsIgnoreCase(updatedCategory.getCategory())) {
-                    categoryCountMap.put(updatedCategory.getCategory(), count += 1);
+                    count += 1;
+                    categoryCountMap.put(updatedCategory.getCategory(), count);
                 } else {
                     categoryCountMap.put(legalCategory, count);
                 }
